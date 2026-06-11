@@ -2,6 +2,22 @@
 
 Static WebGL viewer for the 20-year OGS twin-slope arch-tunnel simulation.
 
+## Open the interactive visualization
+
+Click here to launch the browser-based 3D viewer:
+
+**[Open interactive 3D viewer](https://fx794726198.github.io/ogs-tunnel-web-viewer/)**
+
+Do not click `index.html` in the GitHub file list. The repository page shows the source files; the link above opens the actual interactive visualization.
+
+In the viewer:
+
+- Drag with the mouse or finger to rotate the model.
+- Scroll or pinch to zoom.
+- Use `Displacement` and `Lining stress` to switch result fields.
+- Use the `Year` slider to move through the 20-year result sequence.
+- Use the `Warp` slider to change displacement exaggeration.
+
 ## Local preview
 
 ```bash
