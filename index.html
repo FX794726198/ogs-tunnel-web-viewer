@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Twin-Slope Tunnel Simulation</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="viewer" aria-label="3D simulation viewer">
+        <canvas id="scene"></canvas>
+        <div class="topbar">
+          <div>
+            <h1>20-year 3D twin-slope tunnel simulation</h1>
+            <p id="subtitle">Overall 3D displacement field</p>
+          </div>
+          <div class="segmented" aria-label="Result field">
+            <button class="active" id="show-displacement" type="button">Displacement</button>
+            <button id="show-stress" type="button">Lining stress</button>
+          </div>
+        </div>
+        <aside class="legend-panel">
+          <div class="legend-title" id="legend-title">|u| (m)</div>
+          <div class="legend-bar" id="legend-bar"></div>
+          <div class="legend-scale">
+            <span id="legend-min">0.00</span>
+            <span id="legend-max">2.16</span>
+          </div>
+        </aside>
+        <section class="control-panel" aria-label="Simulation controls">
+          <label>
+            <span>Year</span>
+            <input id="year" type="range" min="0" max="20" step="1" value="20" />
+            <strong id="year-value">20</strong>
+          </label>
+          <label>
+            <span>Warp</span>
+            <input id="warp" type="range" min="0" max="8" step="0.25" value="5" />
+            <strong id="warp-value">5.00x</strong>
+          </label>
+          <div class="metric-strip">
+            <div>
+              <span id="metric-a-label">Max |u|</span>
+              <strong id="metric-a">2.16 m</strong>
+            </div>
+            <div>
+              <span id="metric-b-label">Frame</span>
+              <strong id="metric-b">20 years</strong>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
